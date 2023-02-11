@@ -51,7 +51,3 @@ const News = ({ navigation }) => {
 };
 
 export default News;
-
-/**
- *
- */

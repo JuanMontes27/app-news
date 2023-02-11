@@ -3,7 +3,7 @@ import { View, ScrollView, Text, useWindowDimensions } from "react-native";
 import { Card } from "@rneui/themed";
 import RenderHTML from "react-native-render-html";
 
-const Information = ({ title, image, content }) => {
+const Information = ({ title, image, author, content }) => {
   const { width } = useWindowDimensions();
   title = title.replace(/&#([0-9]{1,4});/gi, function (match, numStr) {
     let num = parseInt(numStr, 10);
@@ -30,6 +30,7 @@ const Information = ({ title, image, content }) => {
               uri: image,
             }}
           />
+          <Text style={{ marginTop: 10 }}>Autor: {author}</Text>
         </Card>
         <RenderHTML contentWidth={width} source={source}/>
       </View>

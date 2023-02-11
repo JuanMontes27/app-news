@@ -33,6 +33,7 @@ const NewInformation = ({ route }) => {
         <Information
           title={infoNew.title.rendered}
           image={infoNew._embedded["wp:featuredmedia"][0]["source_url"]}
+          author={infoNew._embedded.author[0].name}
           content={infoNew.content.rendered}
         />
       )}
